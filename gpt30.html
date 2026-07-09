@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎁 GPT-5.6 × Cursorでやるべきこと30選</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#1C3461; --brand-deep:#16284A; --brand-soft:rgba(28,52,97,.08); --brand-line:rgba(28,52,97,.22);
+  --accent:#5BBCD4; --accent-deep:#2C7A93; --accent-soft:rgba(91,188,212,.16);
+  --bg:#F7FAFC; --paper:#FFFFFF; --ink:#1C3461; --ink-mid:#4A6080; --line:rgba(28,52,97,.12);
+  --head:'Noto Sans JP';
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans JP',-apple-system,'Hiragino Sans','Yu Gothic',sans-serif;line-height:1.7;}
+.doc{max-width:900px;margin:0 auto;background:var(--paper);box-shadow:0 0 60px rgba(0,0,0,.10);min-height:100vh;}
+.hero{position:relative;background:linear-gradient(160deg,var(--brand-soft) 0%,var(--bg) 70%);padding:40px 46px 32px;border-bottom:3px solid var(--brand-line);overflow:hidden;}
+.hero .coin{position:absolute;width:150px;height:150px;border-radius:50%;background:var(--accent);opacity:.15;top:-50px;right:-30px;}
+.chan{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.eyebrow{font-family:var(--head);font-weight:900;color:var(--brand-deep);letter-spacing:2px;font-size:12px;display:inline-block;margin-bottom:8px;}
+h1{font-family:var(--head);font-weight:900;font-size:30px;line-height:1.28;color:var(--ink);}
+h1 .hl{color:var(--brand-deep);}
+.hero p.sub{font-size:15px;color:var(--ink-mid);font-weight:700;margin-top:10px;max-width:680px;}
+.back{display:inline-block;margin-top:14px;font-size:13px;font-weight:700;color:var(--brand-deep);text-decoration:none;background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:6px 16px;}
+.back:hover{border-color:var(--brand);}
+.navbar{position:sticky;top:0;z-index:5;background:var(--brand-soft);border-bottom:1px solid var(--line);padding:12px 46px;display:flex;flex-wrap:wrap;gap:7px;}
+.navbar a{font-size:12px;font-weight:700;color:var(--brand-deep);text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 12px;}
+.navbar a:hover{border-color:var(--brand);}
+.toolbar{padding:16px 46px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--line);}
+.count{font-family:var(--head);font-weight:900;color:var(--brand-deep);font-size:15px;}
+.cat{padding:26px 46px 8px;}
+.cat h2{font-family:var(--head);font-weight:900;font-size:21px;color:var(--ink);border-left:5px solid var(--accent);padding-left:12px;}
+.icards{padding:6px 46px 20px;display:flex;flex-direction:column;gap:14px;}
+.icard{background:var(--bg);border:1.5px solid var(--line);border-radius:13px;padding:16px 18px;}
+.ititle{font-family:var(--head);font-weight:900;font-size:16px;color:var(--ink);margin-bottom:4px;}
+.imeta{font-size:12.5px;color:var(--ink-mid);margin-bottom:10px;}
+pre.prompt{background:var(--ink);color:#ECECEA;border-radius:10px;padding:14px 16px;white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1.6;max-height:340px;overflow-y:auto;}
+.btns{margin-top:10px;display:flex;gap:9px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:7px;background:var(--accent);border:2px solid var(--accent-deep);color:var(--ink);border-radius:999px;padding:8px 18px;font-family:var(--head);font-weight:900;font-size:13px;cursor:pointer;text-decoration:none;}
+.btn.ghost{background:var(--paper);border:1.5px solid var(--line);color:var(--brand-deep);}
+.btn.lg{font-size:15px;padding:11px 26px;}
+.linkcards{padding:8px 46px 30px;display:flex;flex-direction:column;gap:14px;}
+.linkcard{border:1.5px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--bg);}
+.linkcard.accent{border:2px solid var(--brand);background:var(--paper);}
+.linkcard .lt{flex:1;}
+.linkcard .lt b{font-family:var(--head);font-weight:900;font-size:17px;color:var(--ink);display:block;}
+.linkcard .lt span{font-size:13px;color:var(--ink-mid);}
+.linkcard .cnt{font-family:var(--head);font-weight:900;color:var(--accent-deep);background:var(--accent-soft);border-radius:999px;padding:4px 12px;font-size:13px;white-space:nowrap;}
+section.info{padding:28px 46px;border-top:1px solid var(--line);}
+section.info h2{font-family:var(--head);font-weight:900;font-size:20px;color:var(--ink);margin-bottom:12px;}
+section.info ol{margin-left:20px;font-size:15px;color:var(--ink);} section.info li{margin-bottom:7px;}
+.box{background:var(--accent-soft);border:1.5px solid var(--accent);border-radius:12px;padding:16px 20px;margin-top:14px;}
+.box b{color:var(--brand-deep);}
+footer{background:var(--ink);color:#EBEBE7;padding:26px 46px;font-size:12.5px;line-height:1.8;}
+footer a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="doc">
+  <div class="hero"><span class="coin"></span>
+    <div class="chan"><svg width="120" height="27" style="color:var(--brand)" viewBox="0 0 406 93" xmlns="http://www.w3.org/2000/svg"><rect x="6.67572e-06" y="13.4815" width="7.93029" height="74.5447" fill="currentColor"/><path d="M18.2397 52.7235L24.2772 47.5817L57.8911 88.0582L48.3318 88.0582L18.2397 52.7235Z" fill="#5BBCD4"/><path d="M34.8933 49.5514L40.9308 44.4096L77.2278 88.0366L67.4075 88.0262L34.8933 49.5514Z" fill="#5BBCD4"/><rect x="57.1908" y="2.92276" width="7.93029" height="83.5485" transform="rotate(42.3764 57.1908 2.92276)" fill="currentColor"/><rect x="59.4772" width="7.93029" height="22.2048" fill="currentColor"/><rect x="44.4096" y="7.9303" width="7.93029" height="22.9978" transform="rotate(-90 44.4096 7.9303)" fill="currentColor"/><path d="M110.882 61.3999L110.204 47.3281L135.413 20.7649H148.958L126.233 45.2211L119.46 52.4451L110.882 61.3999ZM99.9703 73.4399V20.7649H112.086V73.4399H99.9703ZM136.015 73.4399L117.278 50.4886L125.254 41.8349L150.237 73.4399H136.015ZM181.053 73.4399V65.5386L180.301 63.8079V49.6609C180.301 47.1525 179.523 45.196 177.968 43.7914C176.463 42.3867 174.13 41.6844 170.97 41.6844C168.813 41.6844 166.681 42.0355 164.574 42.7379C162.517 43.39 160.761 44.293 159.306 45.4469L155.092 37.2446C157.299 35.6895 159.958 34.4855 163.069 33.6326C166.179 32.7798 169.339 32.3534 172.55 32.3534C178.721 32.3534 183.512 33.8082 186.923 36.7179C190.334 39.6275 192.04 44.1676 192.04 50.3381V73.4399H181.053ZM168.712 74.0419C165.552 74.0419 162.843 73.5151 160.585 72.4616C158.328 71.358 156.597 69.878 155.393 68.0219C154.189 66.1657 153.587 64.0838 153.587 61.7761C153.587 59.3681 154.164 57.2611 155.318 55.4551C156.522 53.6491 158.403 52.2445 160.962 51.2411C163.52 50.1876 166.856 49.6609 170.97 49.6609H181.731V56.5086H172.249C169.49 56.5086 167.584 56.9601 166.53 57.8631C165.527 58.7661 165.025 59.8949 165.025 61.2494C165.025 62.7544 165.602 63.9584 166.756 64.8614C167.96 65.7142 169.59 66.1406 171.647 66.1406C173.604 66.1406 175.359 65.6891 176.915 64.7861C178.47 63.833 179.599 62.4534 180.301 60.6474L182.107 66.0654C181.254 68.674 179.699 70.6556 177.441 72.0101C175.184 73.3646 172.274 74.0419 168.712 74.0419ZM213.443 73.4399L198.844 32.9554H209.906L222.021 67.7961H216.754L229.396 32.9554H239.329L251.594 67.7961H246.327L258.818 32.9554H269.203L254.529 73.4399H243.166L232.406 43.5656H235.867L224.73 73.4399H213.443ZM300.427 73.4399V65.5386L299.675 63.8079V49.6609C299.675 47.1525 298.897 45.196 297.342 43.7914C295.837 42.3867 293.504 41.6844 290.344 41.6844C288.187 41.6844 286.055 42.0355 283.948 42.7379C281.891 43.39 280.135 44.293 278.68 45.4469L274.466 37.2446C276.674 35.6895 279.332 34.4855 282.443 33.6326C285.553 32.7798 288.714 32.3534 291.924 32.3534C298.095 32.3534 302.886 33.8082 306.297 36.7179C309.708 39.6275 311.414 44.1676 311.414 50.3381V73.4399H300.427ZM288.086 74.0419C284.926 74.0419 282.217 73.5151 279.959 72.4616C277.702 71.358 275.971 69.878 274.767 68.0219C273.563 66.1657 272.961 64.0838 272.961 61.7761C272.961 59.3681 273.538 57.2611 274.692 55.4551C275.896 53.6491 277.777 52.2445 280.336 51.2411C282.894 50.1876 286.23 49.6609 290.344 49.6609H301.105V56.5086H291.623C288.864 56.5086 286.958 56.9601 285.904 57.8631C284.901 58.7661 284.399 59.8949 284.399 61.2494C284.399 62.7544 284.976 63.9584 286.13 64.8614C287.334 65.7142 288.964 66.1406 291.021 66.1406C292.978 66.1406 294.734 65.6891 296.289 64.7861C297.844 63.833 298.973 62.4534 299.675 60.6474L301.481 66.0654C300.628 68.674 299.073 70.6556 296.815 72.0101C294.558 73.3646 291.648 74.0419 288.086 74.0419ZM324.296 73.4399V32.9554H335.508V44.3934L333.928 41.0824C335.132 38.2229 337.063 36.0657 339.722 34.6109C342.381 33.1059 345.617 32.3534 349.429 32.3534V43.1894C348.928 43.1392 348.476 43.1141 348.075 43.1141C347.674 43.064 347.247 43.0389 346.796 43.0389C343.585 43.0389 340.976 43.967 338.97 45.8231C337.013 47.6291 336.035 50.4635 336.035 54.3264V73.4399H324.296ZM376.043 74.0419C372.681 74.0419 369.671 73.3897 367.013 72.0854C364.404 70.781 362.372 68.7995 360.917 66.1406C359.462 63.4316 358.735 59.9952 358.735 55.8314V32.9554H370.474V54.1006C370.474 57.4618 371.176 59.945 372.581 61.5504C374.036 63.1055 376.068 63.8831 378.676 63.8831C380.482 63.8831 382.088 63.5069 383.492 62.7544C384.897 61.9517 386.001 60.7477 386.803 59.1424C387.606 57.4869 388.007 55.43 388.007 52.9719V32.9554H399.746V73.4399H388.609V62.3029L390.641 65.5386C389.287 68.348 387.28 70.48 384.621 71.9349C382.012 73.3395 379.153 74.0419 376.043 74.0419Z" fill="currentColor"/></svg></div>
+    <div class="eyebrow">PRESENT KIT</div>
+    <h1>🎁 <span class="hl">GPT-5.6 × Cursorでやるべきこと30選</span></h1>
+    <p class="sub">最新モデルGPT-5.6をCursorで使い倒す、一歩進んだ実践アイデア。Grok 4.5との使い分けやAgent活用が中心です。</p>
+    <a class="back" href="./present.html">← プレゼント一覧に戻る</a>
+  </div>
+  <div class="navbar"><a href="#gpc1">1. 大規模リファクタ・移行をAgentに任せる</a><a href="#gpc2">2. 設計・アーキテクチャ相談</a><a href="#gpc3">3. 複数モデルの使い分け(Grok 4.5とGPT-5.6の適材適所)</a><a href="#gpc4">4. MCP・外部連携で自動化</a><a href="#gpc5">5. 品質担保(テスト・レビュー・検証で過信を防ぐ)</a><a href="#gpc6">6. 非コード業務(調査・ドキュメント・データ)</a></div>
+  <div class="toolbar">
+    <span class="count">全30個収録</span>
+    <button class="btn ghost" onclick="downloadText('gpfull','gpt56-cursor-30.md', this)">⬇ 全件まとめてダウンロード（.md）</button>
+  </div>
+  <div class="cat" id="gpc1"><h2>1. 大規模リファクタ・移行をAgentに任せる</h2></div><div class="icards"><div class="icard"><div class="ititle">1. フレームワーク移行をPlan mode→Agentの二段階で通す</div><div class="imeta">狙い: 移行作業を「計画レビュー」と「実行」に分離し、着手前に方針の誤りを潰す ｜ 使うモデル/機能: GPT-5.6 Sol + Plan mode</div><pre class="prompt" id="gp1">Plan modeで「このプロジェクトをNext.js 14からNext.js 16へ移行する計画を立てて。破壊的変更点、影響を受けるファイル一覧、移行の順序をステップごとに出して」と依頼する。出てきた計画を読み、順序や優先度に違和感があれば指摘して修正させてから、Agentモードに切り替えて計画通りに実行させる。長い文脈を扱えるモデルほど、移行計画とコードベース全体の対応関係を一度に把握しやすい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp1', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">2. モノレポ全体の型エラーを一括修正させる</div><div class="imeta">狙い: 手作業では追いきれない量の型エラーを、パッケージ間の依存順序を保ったまま解消する ｜ 使うモデル/機能: GPT-5.6 Terra + Agent</div><pre class="prompt" id="gp2">tscをモノレポ全体で実行してエラーログを保存し、それをAgentに渡して「依存関係の下流から上流の順に型エラーを修正して。1パッケージ直すごとにtscを再実行して確認して」と指示する。Agentに繰り返しコマンド実行と修正を任せ、パッケージ単位でコミットを分けさせると後からの差分確認がしやすい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp2', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">3. レガシーAPIの一括置換をバックグラウンドAgentに投げる</div><div class="imeta">狙い: 手を離している間に機械的な置換作業を終わらせる ｜ 使うモデル/機能: GPT-5.6 Terra + Background Agent</div><pre class="prompt" id="gp3">「非推奨のuseFormStateをuseActionStateに全ファイルで置き換えて、呼び出し側の引数の並びも合わせて修正して」というタスクをBackground Agentに投げ、別の作業を進める。完了後は差分をまとめて確認し、置換漏れや意図しない副作用がないかをこちらで最終チェックする。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp3', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">4. 大規模ファイル分割・アーキテクチャ再編をAgentに任せる</div><div class="imeta">狙い: 肥大化したファイルを、責務ごとに安全な手順で分割する ｜ 使うモデル/機能: GPT-5.6 Sol + Agent</div><pre class="prompt" id="gp4">「このファイルは2000行を超えていて責務が混在している。まず現状の責務を洗い出して分割案を提示し、承認後に1つの責務ずつファイルを切り出して、既存のimport先も追従修正して」と段階的に依頼する。一気に分割させず、分割案の提示と実行を分けることで、途中で方向修正できる余地を残す。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp4', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">5. 依存関係アップグレード後の破壊的変更を横断修正する</div><div class="imeta">狙い: メジャーアップデートで発生する影響範囲をコードベース横断で洗い出し、まとめて修正する ｜ 使うモデル/機能: GPT-5.6 Terra + Agent</div><pre class="prompt" id="gp5">package.jsonのバージョンを上げた後、「このライブラリのメジャーアップデートによる破壊的変更を、公式のCHANGELOGを踏まえてコードベース全体から検出して、影響箇所ごとに修正して」と指示する。修正後はビルドとテストを実行させ、失敗が出たら原因箇所を絞り込ませてから再修正させる。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp5', this)">📋 コピー</button></div></div></div><div class="cat" id="gpc2"><h2>2. 設計・アーキテクチャ相談</h2></div><div class="icards"><div class="icard"><div class="ititle">6. 実装前にGPT-5.6と設計のトレードオフを壁打ちする</div><div class="imeta">狙い: 手を動かす前に選択肢を比較し、後戻りのコストを減らす ｜ 使うモデル/機能: GPT-5.6 Sol（チャットのみ、コード変更なし）</div><pre class="prompt" id="gp6">「この機能をイベント駆動で実装する案と、素直に同期処理で実装する案、それぞれのメリット・デメリットを、このプロジェクトの規模と今後の拡張予定を踏まえて比較して」と、コードを書かせずに相談だけする。Composerで実装を始める前にこの壁打ちを挟むと、後半の手戻りが減る。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp6', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">7. 既存コードベースの暗黙ルールを言語化させる</div><div class="imeta">狙い: チームに残る暗黙の設計方針を文書化し、新しい実装がそれに沿っているか判断できるようにする ｜ 使うモデル/機能: GPT-5.6 Terra + 長文コンテキスト読解</div><pre class="prompt" id="gp7">「このリポジトリのエラーハンドリング、状態管理、命名の実際のパターンを、コード例を引用しながら一覧化して。ドキュメントには書かれていないが、コードから読み取れる暗黙のルールに注目して」と依頼し、出てきた内容を docs/conventions.md 等に保存しておく。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp7', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">8. スケーラビリティ観点でのアーキテクチャレビュー</div><div class="imeta">狙い: 今のユーザー数では問題にならないが、将来のスケールで詰まる箇所を事前に洗い出す ｜ 使うモデル/機能: GPT-5.6 Sol</div><pre class="prompt" id="gp8">「このバックエンドの構成を、現在のトラフィックの10倍・100倍になった場合にボトルネックになりそうな箇所という観点でレビューして。DB設計、キャッシュ戦略、同期処理の箇所を優先的に見て」と依頼する。指摘は全部を即対応せず、優先度をつけてバックログに残す運用にする。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp8', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">9. 複数の実装方針を並列で試作させて比較する</div><div class="imeta">狙い: 迷っている設計判断を、実際に動くコードで比較してから決める ｜ 使うモデル/機能: GPT-5.6 Terra + Cloud Agent（並列実行）</div><pre class="prompt" id="gp9">同じ要件に対して「状態管理をContext APIで実装したブランチ」と「軽量な外部ライブラリで実装したブランチ」をCloud Agentで並列に作らせる。両方のdiffの見通しやすさ、テストの書きやすさを実際に読んで比較し、どちらを採用するか判断する。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp9', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">10. 技術選定の根拠をドキュメント化させる</div><div class="imeta">狙い: 後から「なぜこの技術を選んだか」を追えるようにし、判断の再検討を容易にする ｜ 使うモデル/機能: GPT-5.6 Terra</div><pre class="prompt" id="gp10">技術選定の議論をひと通り終えた後、「この会話の内容を、検討した選択肢・却下した理由・採用理由の形式でADR(Architecture Decision Record)としてまとめて」と依頼し、docs/adr/ 配下に保存する。判断の経緯が残ることで、数か月後の見直しが楽になる。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp10', this)">📋 コピー</button></div></div></div><div class="cat" id="gpc3"><h2>3. 複数モデルの使い分け(Grok 4.5とGPT-5.6の適材適所)</h2></div><div class="icards"><div class="icard"><div class="ititle">11. 探索はGrok 4.5、最終実装はGPT-5.6という役割分担</div><div class="imeta">狙い: コストと精度のバランスを、作業フェーズごとに最適化する ｜ 使うモデル/機能: Grok 4.5 → GPT-5.6の切り替え</div><pre class="prompt" id="gp11">バグの原因箇所を広く探す、複数ファイルを横断して該当コードを探すといった「量をこなす探索」はトークン効率の良いGrok 4.5に任せる。原因箇所が絞り込めたら、そこから先の実装や修正はGPT-5.6に切り替えて仕上げる。Cursor上でモデルを切り替えるだけで、同じ会話の文脈を引き継げる。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp11', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">12. 同じタスクを両モデルに投げて差分を比較する</div><div class="imeta">狙い: モデル間の得意・不得意を自分のプロジェクトで実際に把握する ｜ 使うモデル/機能: GPT-5.6 Terra と Grok 4.5 の並行実行</div><pre class="prompt" id="gp12">判断に迷う中規模の修正タスクを、別々のチャットでGPT-5.6とGrok 4.5の両方に同じプロンプトで依頼する。出てきた差分を並べて読み比べ、どちらがこのプロジェクトのスタイルに合っているか、テストの網羅性はどうかを確認する。数回繰り返すと、自分のリポジトリでの使い分けの勘所が見えてくる。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp12', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">13. コストのかかる大規模タスクの下調べをGrok 4.5に任せる</div><div class="imeta">狙い: トークン消費の大きい「全文検索・全ファイル読み込み」を、コスト効率の良いモデルで済ませる ｜ 使うモデル/機能: Grok 4.5</div><pre class="prompt" id="gp13">「このリポジトリ全体から、この非推奨関数を呼んでいる箇所を全部リストアップして、呼び出しコンテキストも一緒に出して」といった、精度より網羅性が重要な下調べタスクをGrok 4.5に依頼する。出てきたリストを土台にして、実際の修正はGPT-5.6のAgentに引き継ぐ。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp13', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">14. GPT-5.6の3階層(Sol/Terra/Luna)をタスクの重さで切り替える</div><div class="imeta">狙い: 応答速度とコストと推論の深さを、タスクの重要度に応じて調整する ｜ 使うモデル/機能: GPT-5.6 Sol / Terra / Luna</div><pre class="prompt" id="gp14">設計判断や大規模リファクタなど、後戻りのコストが大きいタスクはSolを選ぶ。日常的な実装や中規模の修正はTerraを基本にする。タイポ修正や単純なコマンド実行のような軽微な作業はLunaに任せ、Solでの応答待ちを減らす。この切り分けを自分の作業ルールとして固定しておくと、都度悩まずに済む。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp14', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">15. Autoルーティングに任せず明示的にモデル指定する場面を切り分ける</div><div class="imeta">狙い: Cursorの自動選択に任せていい場面と、自分で選ぶべき場面を区別する ｜ 使うモデル/機能: Auto routing と手動モデル選択</div><pre class="prompt" id="gp15">日常的な小さい修正はAutoに任せてモデル選択の手間を省く。一方で、アーキテクチャ判断や大規模移行のように結果の質が重要なタスクでは、Autoに任せず明示的にGPT-5.6 Solを指定する。どのタスクは手動指定するかを自分の中で線引きしておくと、コストと品質のバランスが取りやすい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp15', this)">📋 コピー</button></div></div></div><div class="cat" id="gpc4"><h2>4. MCP・外部連携で自動化</h2></div><div class="icards"><div class="icard"><div class="ititle">16. 社内ドキュメント検索MCPをコンテキストに組み込む</div><div class="imeta">狙い: Cursorの外にある社内知識をAgentの判断材料に含める ｜ 使うモデル/機能: GPT-5.6 Terra + MCP(Notion/Confluence等)</div><pre class="prompt" id="gp16">社内ドキュメント用のMCPサーバーを接続し、「このAPIの仕様変更を実装する前に、社内ドキュメントに記載されている既存の設計方針を確認して、それに沿った実装にして」と依頼する。コードベースだけでは分からない業務ルールをAgentが参照できるようになる。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp16', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">17. Issueトラッカー連携でチケット起票から実装まで繋げる</div><div class="imeta">狙い: 起票・調査・実装・進捗更新をひとつの流れで完結させる ｜ 使うモデル/機能: GPT-5.6 Terra + MCP(Linear/Jira等)</div><pre class="prompt" id="gp17">Issueトラッカーとの連携MCPを使い、「このIssueの内容を読んで、実装方針を3行で要約してから着手して。完了したらIssueにコメントで対応内容を報告して」と指示する。実装とチケット管理の行き来が減り、対応漏れの報告も自動化できる。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp17', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">18. デザインツール連携でUI差分を検証する</div><div class="imeta">狙い: デザインとの見た目の差分を、目視だけに頼らず機械的に照合する ｜ 使うモデル/機能: GPT-5.6 Sol + MCP(Figma等)</div><pre class="prompt" id="gp18">デザインツールのMCPを接続し、「このFigmaのコンポーネントと、実装済みのReactコンポーネントを比較して、余白・フォントサイズ・色の差分を一覧にして」と依頼する。差分が出た箇所だけをピンポイントで修正させ、全体を作り直させない。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp18', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">19. データベースMCPでスキーマ変更の影響範囲を洗い出す</div><div class="imeta">狙い: マイグレーション前に、影響を受けるクエリやコードを事前に把握する ｜ 使うモデル/機能: GPT-5.6 Terra + MCP(DB接続)</div><pre class="prompt" id="gp19">DB接続MCPを使い、「このテーブルにカラムを追加するマイグレーションを検討している。既存のクエリとORMのモデル定義のうち、この変更で影響を受ける箇所を洗い出して」と依頼する。本番相当のスキーマを直接参照させることで、コードだけを見た推測より精度の高い影響範囲を得られる。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp19', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">20. Hooksでコミット前チェックを自動化する</div><div class="imeta">狙い: Agentが生成したコードに対する検証を、人が忘れても機械的に走らせる ｜ 使うモデル/機能: Cursor Hooks</div><pre class="prompt" id="gp20">コミット前にlintとテストと型チェックを自動実行するHookを設定し、いずれかが失敗したらコミットをブロックするようにする。GPT-5.6のAgentが自律的に複数ファイルを変更した後でも、このHookが最後の砦として機能し、壊れたコードがそのままコミットされるのを防ぐ。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp20', this)">📋 コピー</button></div></div></div><div class="cat" id="gpc5"><h2>5. 品質担保(テスト・レビュー・検証で過信を防ぐ)</h2></div><div class="icards"><div class="icard"><div class="ititle">21. Bugbotの指摘を鵜呑みにせず根拠を確認する</div><div class="imeta">狙い: 自動レビューの指摘を、そのまま採用せず自分で妥当性を判断する習慣をつける ｜ 使うモデル/機能: Bugbot</div><pre class="prompt" id="gp21">BugbotがPRに指摘を付けたら、「この指摘の根拠になっているコード箇所と、指摘が誤りである可能性を含めて説明して」と聞き返す。指摘が的確なら反映し、文脈を読み違えている場合はコメントで却下理由を残す。指摘を作業リストとして機械的に消化しない。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp21', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">22. モデルの「報酬ハッキング」傾向を前提にテストを別途走らせる</div><div class="imeta">狙い: モデルがWeb検索やGit履歴から答えを持ってくることで見かけ上のスコアが良くなる現象を、実運用のコードでも警戒する ｜ 使うモデル/機能: GPT-5.6 Sol + 独立したテスト実行</div><pre class="prompt" id="gp22">Agentに「このバグを修正して」と依頼した後、修正内容がGitの過去のコミットや外部の類似実装をそのまま持ってきていないかを確認する。修正が本当に今のコードベースの状況に対応しているかを、実際にテストを再実行し、修正前の状態でも同じテストが通っていないかを別途確認する。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp22', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">23. 生成コードの参照元(Web検索/Git履歴)を明示させる</div><div class="imeta">狙い: モデルがどこから情報を得て実装したのかを可視化し、検証の手がかりにする ｜ 使うモデル/機能: GPT-5.6 Terra</div><pre class="prompt" id="gp23">「この実装で参照したWebページやライブラリのドキュメント、あるいは参考にした既存コードがあれば教えて」と聞く。参照元が古いバージョンのドキュメントだったり、プロジェクトの実際の構成と合わない外部実装だったりする場合は、その部分を重点的に見直す。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp23', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">24. 大規模変更後の回帰テストをAgentに書かせて自分で読む</div><div class="imeta">狙い: 変更範囲が広いタスクほど、テストの網羅性を機械任せにしない ｜ 使うモデル/機能: GPT-5.6 Sol + Agent</div><pre class="prompt" id="gp24">大規模リファクタが終わった後、「この変更で壊れる可能性がある既存の挙動を洗い出して、それぞれに対する回帰テストを書いて」と依頼する。生成されたテストコードは実行結果だけでなく、テストが本当に意図した挙動を検証しているかを一つずつ目で確認する。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp24', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">25. Cloud Agentの並列実行結果を人力で突き合わせる</div><div class="imeta">狙い: 並列実行によるスピードの恩恵を、品質を落とさずに受け取る ｜ 使うモデル/機能: GPT-5.6 Terra + Cloud Agent</div><pre class="prompt" id="gp25">同じ修正タスクを、プロンプトの表現を少し変えて複数のCloud Agentに並列で投げる。出てきた複数の実装案を並べて、テストの通過状況、コードの読みやすさ、既存パターンとの一貫性を基準に比較してから、最も良いものを採用するか、良い部分を組み合わせて仕上げる。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp25', this)">📋 コピー</button></div></div></div><div class="cat" id="gpc6"><h2>6. 非コード業務(調査・ドキュメント・データ)</h2></div><div class="icards"><div class="icard"><div class="ititle">26. 技術調査レポートを長文コンテキストで一気に作らせる</div><div class="imeta">狙い: 複数の技術選択肢の調査を、断片的にではなくまとまった一つの資料として整理する ｜ 使うモデル/機能: GPT-5.6 Sol</div><pre class="prompt" id="gp26">「認証基盤としてA・B・Cの3つのサービスを比較検討している。それぞれの料金体系、このプロジェクトの規模での運用コスト、移行のしやすさを表形式で比較したレポートを作って」と依頼する。長い文脈を一度に扱えるモデルの特性を活かし、断片的な調査を都度貼り合わせる手間を減らす。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp26', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">27. READMEやAPIドキュメントの整合性チェック</div><div class="imeta">狙い: 実装は変わったのにドキュメントが古いままという状態を定期的に検出する ｜ 使うモデル/機能: GPT-5.6 Terra</div><pre class="prompt" id="gp27">「README.mdとAPIドキュメントに書かれている内容が、実際のコードの挙動と一致しているか確認して。ずれている箇所があれば、どちらを直すべきか判断できるように差分を示して」と依頼する。実装優先で自動修正させず、まず差分の提示だけを求めるのがポイント。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp27', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">28. ログ・エラーデータの傾向分析</div><div class="imeta">狙い: 大量のログから人手では気づきにくい傾向を拾い出す ｜ 使うモデル/機能: GPT-5.6 Sol + MCP(ログ基盤連携)</div><pre class="prompt" id="gp28">エラーログをエクスポートしてAgentに渡し、「このログの中から、発生頻度が高いエラーパターンを分類して、それぞれの推定原因とコードベース内の該当箇所を紐づけて」と依頼する。件数の多いログを人が一件ずつ読む作業を、傾向の抽出という形に置き換える。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp28', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">29. 議事録やIssueコメントからタスク一覧を抽出する</div><div class="imeta">狙い: 会話の中に埋もれた「やるべきこと」を、実行可能なタスクリストに変換する ｜ 使うモデル/機能: GPT-5.6 Terra</div><pre class="prompt" id="gp29">ミーティングの文字起こしやIssueのコメント履歴をAgentに渡し、「この中で誰が何をいつまでにやると言及されているかを抽出して、担当者・期限・タスク内容の一覧にして」と依頼する。長い会話から人手で拾うより漏れが減り、そのままIssue化する土台になる。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp29', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">30. 新メンバー向けオンボーディング資料の生成</div><div class="imeta">狙い: コードベースの構造や開発フローを、新しく入った人が自走できる形の資料にする ｜ 使うモデル/機能: GPT-5.6 Sol</div><pre class="prompt" id="gp30">「このリポジトリを初めて触る人向けに、ディレクトリ構成の意味、開発環境のセットアップ手順、よく使うコマンド、注意すべき既知の落とし穴をまとめたオンボーディング資料を作って」と依頼する。作成後は実際に手順通り環境構築を試し、抜けている手順があれば追記する。</pre><div class="btns"><button class="btn" onclick="copyPrompt('gp30', this)">📋 コピー</button></div></div></div>
+  <pre id="gpfull" style="display:none;"># 🎁 GPT-5.6 × Cursorでやるべきこと30選
+
+一般公開された最新モデルGPT-5.6を、Cursorで使い倒すための一歩進んだ実践アイデアを30個まとめました。Grok 4.5との使い分けや、Agent・MCP・Plan modeを組み合わせた活用が中心です。
+
+**受け取り方**: 各アイデアの手順・プロンプトをコピーして、Cursorで試してください。
+
+## 1. 大規模リファクタ・移行をAgentに任せる
+
+### 1. フレームワーク移行をPlan mode→Agentの二段階で通す
+狙い: 移行作業を「計画レビュー」と「実行」に分離し、着手前に方針の誤りを潰す ｜ 使うモデル/機能: GPT-5.6 Sol + Plan mode
+```text
+Plan modeで「このプロジェクトをNext.js 14からNext.js 16へ移行する計画を立てて。破壊的変更点、影響を受けるファイル一覧、移行の順序をステップごとに出して」と依頼する。出てきた計画を読み、順序や優先度に違和感があれば指摘して修正させてから、Agentモードに切り替えて計画通りに実行させる。長い文脈を扱えるモデルほど、移行計画とコードベース全体の対応関係を一度に把握しやすい。
+```
+
+### 2. モノレポ全体の型エラーを一括修正させる
+狙い: 手作業では追いきれない量の型エラーを、パッケージ間の依存順序を保ったまま解消する ｜ 使うモデル/機能: GPT-5.6 Terra + Agent
+```text
+tscをモノレポ全体で実行してエラーログを保存し、それをAgentに渡して「依存関係の下流から上流の順に型エラーを修正して。1パッケージ直すごとにtscを再実行して確認して」と指示する。Agentに繰り返しコマンド実行と修正を任せ、パッケージ単位でコミットを分けさせると後からの差分確認がしやすい。
+```
+
+### 3. レガシーAPIの一括置換をバックグラウンドAgentに投げる
+狙い: 手を離している間に機械的な置換作業を終わらせる ｜ 使うモデル/機能: GPT-5.6 Terra + Background Agent
+```text
+「非推奨のuseFormStateをuseActionStateに全ファイルで置き換えて、呼び出し側の引数の並びも合わせて修正して」というタスクをBackground Agentに投げ、別の作業を進める。完了後は差分をまとめて確認し、置換漏れや意図しない副作用がないかをこちらで最終チェックする。
+```
+
+### 4. 大規模ファイル分割・アーキテクチャ再編をAgentに任せる
+狙い: 肥大化したファイルを、責務ごとに安全な手順で分割する ｜ 使うモデル/機能: GPT-5.6 Sol + Agent
+```text
+「このファイルは2000行を超えていて責務が混在している。まず現状の責務を洗い出して分割案を提示し、承認後に1つの責務ずつファイルを切り出して、既存のimport先も追従修正して」と段階的に依頼する。一気に分割させず、分割案の提示と実行を分けることで、途中で方向修正できる余地を残す。
+```
+
+### 5. 依存関係アップグレード後の破壊的変更を横断修正する
+狙い: メジャーアップデートで発生する影響範囲をコードベース横断で洗い出し、まとめて修正する ｜ 使うモデル/機能: GPT-5.6 Terra + Agent
+```text
+package.jsonのバージョンを上げた後、「このライブラリのメジャーアップデートによる破壊的変更を、公式のCHANGELOGを踏まえてコードベース全体から検出して、影響箇所ごとに修正して」と指示する。修正後はビルドとテストを実行させ、失敗が出たら原因箇所を絞り込ませてから再修正させる。
+```
+
+## 2. 設計・アーキテクチャ相談
+
+### 6. 実装前にGPT-5.6と設計のトレードオフを壁打ちする
+狙い: 手を動かす前に選択肢を比較し、後戻りのコストを減らす ｜ 使うモデル/機能: GPT-5.6 Sol（チャットのみ、コード変更なし）
+```text
+「この機能をイベント駆動で実装する案と、素直に同期処理で実装する案、それぞれのメリット・デメリットを、このプロジェクトの規模と今後の拡張予定を踏まえて比較して」と、コードを書かせずに相談だけする。Composerで実装を始める前にこの壁打ちを挟むと、後半の手戻りが減る。
+```
+
+### 7. 既存コードベースの暗黙ルールを言語化させる
+狙い: チームに残る暗黙の設計方針を文書化し、新しい実装がそれに沿っているか判断できるようにする ｜ 使うモデル/機能: GPT-5.6 Terra + 長文コンテキスト読解
+```text
+「このリポジトリのエラーハンドリング、状態管理、命名の実際のパターンを、コード例を引用しながら一覧化して。ドキュメントには書かれていないが、コードから読み取れる暗黙のルールに注目して」と依頼し、出てきた内容を docs/conventions.md 等に保存しておく。
+```
+
+### 8. スケーラビリティ観点でのアーキテクチャレビュー
+狙い: 今のユーザー数では問題にならないが、将来のスケールで詰まる箇所を事前に洗い出す ｜ 使うモデル/機能: GPT-5.6 Sol
+```text
+「このバックエンドの構成を、現在のトラフィックの10倍・100倍になった場合にボトルネックになりそうな箇所という観点でレビューして。DB設計、キャッシュ戦略、同期処理の箇所を優先的に見て」と依頼する。指摘は全部を即対応せず、優先度をつけてバックログに残す運用にする。
+```
+
+### 9. 複数の実装方針を並列で試作させて比較する
+狙い: 迷っている設計判断を、実際に動くコードで比較してから決める ｜ 使うモデル/機能: GPT-5.6 Terra + Cloud Agent（並列実行）
+```text
+同じ要件に対して「状態管理をContext APIで実装したブランチ」と「軽量な外部ライブラリで実装したブランチ」をCloud Agentで並列に作らせる。両方のdiffの見通しやすさ、テストの書きやすさを実際に読んで比較し、どちらを採用するか判断する。
+```
+
+### 10. 技術選定の根拠をドキュメント化させる
+狙い: 後から「なぜこの技術を選んだか」を追えるようにし、判断の再検討を容易にする ｜ 使うモデル/機能: GPT-5.6 Terra
+```text
+技術選定の議論をひと通り終えた後、「この会話の内容を、検討した選択肢・却下した理由・採用理由の形式でADR(Architecture Decision Record)としてまとめて」と依頼し、docs/adr/ 配下に保存する。判断の経緯が残ることで、数か月後の見直しが楽になる。
+```
+
+## 3. 複数モデルの使い分け(Grok 4.5とGPT-5.6の適材適所)
+
+### 11. 探索はGrok 4.5、最終実装はGPT-5.6という役割分担
+狙い: コストと精度のバランスを、作業フェーズごとに最適化する ｜ 使うモデル/機能: Grok 4.5 → GPT-5.6の切り替え
+```text
+バグの原因箇所を広く探す、複数ファイルを横断して該当コードを探すといった「量をこなす探索」はトークン効率の良いGrok 4.5に任せる。原因箇所が絞り込めたら、そこから先の実装や修正はGPT-5.6に切り替えて仕上げる。Cursor上でモデルを切り替えるだけで、同じ会話の文脈を引き継げる。
+```
+
+### 12. 同じタスクを両モデルに投げて差分を比較する
+狙い: モデル間の得意・不得意を自分のプロジェクトで実際に把握する ｜ 使うモデル/機能: GPT-5.6 Terra と Grok 4.5 の並行実行
+```text
+判断に迷う中規模の修正タスクを、別々のチャットでGPT-5.6とGrok 4.5の両方に同じプロンプトで依頼する。出てきた差分を並べて読み比べ、どちらがこのプロジェクトのスタイルに合っているか、テストの網羅性はどうかを確認する。数回繰り返すと、自分のリポジトリでの使い分けの勘所が見えてくる。
+```
+
+### 13. コストのかかる大規模タスクの下調べをGrok 4.5に任せる
+狙い: トークン消費の大きい「全文検索・全ファイル読み込み」を、コスト効率の良いモデルで済ませる ｜ 使うモデル/機能: Grok 4.5
+```text
+「このリポジトリ全体から、この非推奨関数を呼んでいる箇所を全部リストアップして、呼び出しコンテキストも一緒に出して」といった、精度より網羅性が重要な下調べタスクをGrok 4.5に依頼する。出てきたリストを土台にして、実際の修正はGPT-5.6のAgentに引き継ぐ。
+```
+
+### 14. GPT-5.6の3階層(Sol/Terra/Luna)をタスクの重さで切り替える
+狙い: 応答速度とコストと推論の深さを、タスクの重要度に応じて調整する ｜ 使うモデル/機能: GPT-5.6 Sol / Terra / Luna
+```text
+設計判断や大規模リファクタなど、後戻りのコストが大きいタスクはSolを選ぶ。日常的な実装や中規模の修正はTerraを基本にする。タイポ修正や単純なコマンド実行のような軽微な作業はLunaに任せ、Solでの応答待ちを減らす。この切り分けを自分の作業ルールとして固定しておくと、都度悩まずに済む。
+```
+
+### 15. Autoルーティングに任せず明示的にモデル指定する場面を切り分ける
+狙い: Cursorの自動選択に任せていい場面と、自分で選ぶべき場面を区別する ｜ 使うモデル/機能: Auto routing と手動モデル選択
+```text
+日常的な小さい修正はAutoに任せてモデル選択の手間を省く。一方で、アーキテクチャ判断や大規模移行のように結果の質が重要なタスクでは、Autoに任せず明示的にGPT-5.6 Solを指定する。どのタスクは手動指定するかを自分の中で線引きしておくと、コストと品質のバランスが取りやすい。
+```
+
+## 4. MCP・外部連携で自動化
+
+### 16. 社内ドキュメント検索MCPをコンテキストに組み込む
+狙い: Cursorの外にある社内知識をAgentの判断材料に含める ｜ 使うモデル/機能: GPT-5.6 Terra + MCP(Notion/Confluence等)
+```text
+社内ドキュメント用のMCPサーバーを接続し、「このAPIの仕様変更を実装する前に、社内ドキュメントに記載されている既存の設計方針を確認して、それに沿った実装にして」と依頼する。コードベースだけでは分からない業務ルールをAgentが参照できるようになる。
+```
+
+### 17. Issueトラッカー連携でチケット起票から実装まで繋げる
+狙い: 起票・調査・実装・進捗更新をひとつの流れで完結させる ｜ 使うモデル/機能: GPT-5.6 Terra + MCP(Linear/Jira等)
+```text
+Issueトラッカーとの連携MCPを使い、「このIssueの内容を読んで、実装方針を3行で要約してから着手して。完了したらIssueにコメントで対応内容を報告して」と指示する。実装とチケット管理の行き来が減り、対応漏れの報告も自動化できる。
+```
+
+### 18. デザインツール連携でUI差分を検証する
+狙い: デザインとの見た目の差分を、目視だけに頼らず機械的に照合する ｜ 使うモデル/機能: GPT-5.6 Sol + MCP(Figma等)
+```text
+デザインツールのMCPを接続し、「このFigmaのコンポーネントと、実装済みのReactコンポーネントを比較して、余白・フォントサイズ・色の差分を一覧にして」と依頼する。差分が出た箇所だけをピンポイントで修正させ、全体を作り直させない。
+```
+
+### 19. データベースMCPでスキーマ変更の影響範囲を洗い出す
+狙い: マイグレーション前に、影響を受けるクエリやコードを事前に把握する ｜ 使うモデル/機能: GPT-5.6 Terra + MCP(DB接続)
+```text
+DB接続MCPを使い、「このテーブルにカラムを追加するマイグレーションを検討している。既存のクエリとORMのモデル定義のうち、この変更で影響を受ける箇所を洗い出して」と依頼する。本番相当のスキーマを直接参照させることで、コードだけを見た推測より精度の高い影響範囲を得られる。
+```
+
+### 20. Hooksでコミット前チェックを自動化する
+狙い: Agentが生成したコードに対する検証を、人が忘れても機械的に走らせる ｜ 使うモデル/機能: Cursor Hooks
+```text
+コミット前にlintとテストと型チェックを自動実行するHookを設定し、いずれかが失敗したらコミットをブロックするようにする。GPT-5.6のAgentが自律的に複数ファイルを変更した後でも、このHookが最後の砦として機能し、壊れたコードがそのままコミットされるのを防ぐ。
+```
+
+## 5. 品質担保(テスト・レビュー・検証で過信を防ぐ)
+
+### 21. Bugbotの指摘を鵜呑みにせず根拠を確認する
+狙い: 自動レビューの指摘を、そのまま採用せず自分で妥当性を判断する習慣をつける ｜ 使うモデル/機能: Bugbot
+```text
+BugbotがPRに指摘を付けたら、「この指摘の根拠になっているコード箇所と、指摘が誤りである可能性を含めて説明して」と聞き返す。指摘が的確なら反映し、文脈を読み違えている場合はコメントで却下理由を残す。指摘を作業リストとして機械的に消化しない。
+```
+
+### 22. モデルの「報酬ハッキング」傾向を前提にテストを別途走らせる
+狙い: モデルがWeb検索やGit履歴から答えを持ってくることで見かけ上のスコアが良くなる現象を、実運用のコードでも警戒する ｜ 使うモデル/機能: GPT-5.6 Sol + 独立したテスト実行
+```text
+Agentに「このバグを修正して」と依頼した後、修正内容がGitの過去のコミットや外部の類似実装をそのまま持ってきていないかを確認する。修正が本当に今のコードベースの状況に対応しているかを、実際にテストを再実行し、修正前の状態でも同じテストが通っていないかを別途確認する。
+```
+
+### 23. 生成コードの参照元(Web検索/Git履歴)を明示させる
+狙い: モデルがどこから情報を得て実装したのかを可視化し、検証の手がかりにする ｜ 使うモデル/機能: GPT-5.6 Terra
+```text
+「この実装で参照したWebページやライブラリのドキュメント、あるいは参考にした既存コードがあれば教えて」と聞く。参照元が古いバージョンのドキュメントだったり、プロジェクトの実際の構成と合わない外部実装だったりする場合は、その部分を重点的に見直す。
+```
+
+### 24. 大規模変更後の回帰テストをAgentに書かせて自分で読む
+狙い: 変更範囲が広いタスクほど、テストの網羅性を機械任せにしない ｜ 使うモデル/機能: GPT-5.6 Sol + Agent
+```text
+大規模リファクタが終わった後、「この変更で壊れる可能性がある既存の挙動を洗い出して、それぞれに対する回帰テストを書いて」と依頼する。生成されたテストコードは実行結果だけでなく、テストが本当に意図した挙動を検証しているかを一つずつ目で確認する。
+```
+
+### 25. Cloud Agentの並列実行結果を人力で突き合わせる
+狙い: 並列実行によるスピードの恩恵を、品質を落とさずに受け取る ｜ 使うモデル/機能: GPT-5.6 Terra + Cloud Agent
+```text
+同じ修正タスクを、プロンプトの表現を少し変えて複数のCloud Agentに並列で投げる。出てきた複数の実装案を並べて、テストの通過状況、コードの読みやすさ、既存パターンとの一貫性を基準に比較してから、最も良いものを採用するか、良い部分を組み合わせて仕上げる。
+```
+
+## 6. 非コード業務(調査・ドキュメント・データ)
+
+### 26. 技術調査レポートを長文コンテキストで一気に作らせる
+狙い: 複数の技術選択肢の調査を、断片的にではなくまとまった一つの資料として整理する ｜ 使うモデル/機能: GPT-5.6 Sol
+```text
+「認証基盤としてA・B・Cの3つのサービスを比較検討している。それぞれの料金体系、このプロジェクトの規模での運用コスト、移行のしやすさを表形式で比較したレポートを作って」と依頼する。長い文脈を一度に扱えるモデルの特性を活かし、断片的な調査を都度貼り合わせる手間を減らす。
+```
+
+### 27. READMEやAPIドキュメントの整合性チェック
+狙い: 実装は変わったのにドキュメントが古いままという状態を定期的に検出する ｜ 使うモデル/機能: GPT-5.6 Terra
+```text
+「README.mdとAPIドキュメントに書かれている内容が、実際のコードの挙動と一致しているか確認して。ずれている箇所があれば、どちらを直すべきか判断できるように差分を示して」と依頼する。実装優先で自動修正させず、まず差分の提示だけを求めるのがポイント。
+```
+
+### 28. ログ・エラーデータの傾向分析
+狙い: 大量のログから人手では気づきにくい傾向を拾い出す ｜ 使うモデル/機能: GPT-5.6 Sol + MCP(ログ基盤連携)
+```text
+エラーログをエクスポートしてAgentに渡し、「このログの中から、発生頻度が高いエラーパターンを分類して、それぞれの推定原因とコードベース内の該当箇所を紐づけて」と依頼する。件数の多いログを人が一件ずつ読む作業を、傾向の抽出という形に置き換える。
+```
+
+### 29. 議事録やIssueコメントからタスク一覧を抽出する
+狙い: 会話の中に埋もれた「やるべきこと」を、実行可能なタスクリストに変換する ｜ 使うモデル/機能: GPT-5.6 Terra
+```text
+ミーティングの文字起こしやIssueのコメント履歴をAgentに渡し、「この中で誰が何をいつまでにやると言及されているかを抽出して、担当者・期限・タスク内容の一覧にして」と依頼する。長い会話から人手で拾うより漏れが減り、そのままIssue化する土台になる。
+```
+
+### 30. 新メンバー向けオンボーディング資料の生成
+狙い: コードベースの構造や開発フローを、新しく入った人が自走できる形の資料にする ｜ 使うモデル/機能: GPT-5.6 Sol
+```text
+「このリポジトリを初めて触る人向けに、ディレクトリ構成の意味、開発環境のセットアップ手順、よく使うコマンド、注意すべき既知の落とし穴をまとめたオンボーディング資料を作って」と依頼する。作成後は実際に手順通り環境構築を試し、抜けている手順があれば追記する。
+```
+</pre>
+  <footer>各項目のコピーボタンで1つずつ受け取れます。まとめて欲しいときは上の「全件ダウンロード」から。<br>GitHubの <a href="./kit/gpt56-cursor-30.md">kit/gpt56-cursor-30.md</a> からも受け取れます。</footer>
+</div>
+<script>
+function copyTextWithFallback(text){
+  function fallback(){
+    try{ const ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select();
+      const ok=document.execCommand('copy'); ta.remove(); return ok; }catch(e){ return false; }
+  }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    return navigator.clipboard.writeText(text).then(()=>true).catch(fallback);
+  }
+  return Promise.resolve(fallback());
+}
+function showCopyResult(btn, ok){
+  const orig=btn.dataset.orig||btn.textContent; btn.dataset.orig=orig;
+  btn.textContent = ok?'✔ コピーしました！':'✖ コピー不可。⬇ ダウンロードをご利用ください';
+  setTimeout(()=>{ btn.textContent=orig; }, ok?1800:3500);
+}
+async function copyPrompt(id, btn){
+  const ok=await copyTextWithFallback(document.getElementById(id).textContent);
+  showCopyResult(btn, ok);
+}
+function downloadText(id, filename, btn){
+  try{
+    const text=document.getElementById(id).textContent;
+    const blob=new Blob([text],{type:'text/plain;charset=utf-8'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a'); a.href=url; a.download=filename;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),2000);
+  }catch(e){ if(btn){ const o=btn.textContent; btn.textContent='✖ 保存不可。上のコピーをご利用ください'; setTimeout(()=>{btn.textContent=o;},3500);} }
+}
+</script>
+</body>
+</html>
